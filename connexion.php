@@ -36,7 +36,7 @@
     		$message='';
    		 if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
    		 {
-        		$message = '<p>une erreur s\'est produite pendant votre identification. Vous devez remplir tous les champs</p> <p>Cliquez <a href="./connexion.php">ici</a> pour revenir</p>';
+        		$message = '<span style="color:red;"><p>une erreur s\'est produite pendant votre identification. Vous devez remplir tous les champs</p></span> ';
                         afficher();
    		 }
     		else //On check le mot de passe
@@ -55,7 +55,7 @@
 		}
 		else // Acces pas OK !
 		{
-	    		$message = '<p>Une erreur s\'est produite pendant votre identification.<br /> Le mot de passe ou le pseudo entré n\'est pas correcte.</p><p>Cliquez <a href="./connexion.php">ici</a> pour revenir à la page précédente <br /><br />Cliquez <a href="./index.php">ici</a> pour revenir à la page d accueil</p>';
+	    		$message = '<span style="color:red;"><p>Une erreur s\'est produite pendant votre identification.<br /> Le mot de passe ou le pseudo entré n\'est pas correcte.</p></span>Cliquez <a href="./index.php">ici</a> pour revenir à la page d accueil</p>';
                         afficher();
 		}
     $query->CloseCursor();
