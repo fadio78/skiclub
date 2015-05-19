@@ -5,11 +5,11 @@
         <title>Se connecter </title>
     </head>
     <body>
-        <h2>Page de test</h2>
+        
         
 
 	<?php
-function aaa(){
+            function afficher(){
 		echo '<form method="post" action="connexion.php">
 		<fieldset>
 		<legend>Connexion</legend>
@@ -28,7 +28,7 @@ function aaa(){
 	if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
 	{
 		
-		aaa();
+		afficher();
 
 	}
 	else
@@ -37,7 +37,7 @@ function aaa(){
    		 if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
    		 {
         		$message = '<p>une erreur s\'est produite pendant votre identification. Vous devez remplir tous les champs</p> <p>Cliquez <a href="./connexion.php">ici</a> pour revenir</p>';
-		aaa();
+                        afficher();
    		 }
     		else //On check le mot de passe
     		{
@@ -56,7 +56,7 @@ function aaa(){
 		else // Acces pas OK !
 		{
 	    		$message = '<p>Une erreur s\'est produite pendant votre identification.<br /> Le mot de passe ou le pseudo entré n\'est pas correcte.</p><p>Cliquez <a href="./connexion.php">ici</a> pour revenir à la page précédente <br /><br />Cliquez <a href="./index.php">ici</a> pour revenir à la page d accueil</p>';
-		aaa();
+                        afficher();
 		}
     $query->CloseCursor();
     }
